@@ -1,2 +1,8 @@
 # PIO-SP-clone
 A clone of the 1980s Cambridge Microelectronics (Camel Products) PIO-SP providing 8 latched inputs and 8 latched outputs for the ZX Spectrum range of machines on port 63 (decimal).
+
+# From the original User Notes
+This parallel input/output card allows the Sinclair Spectrum personal computer to control external hardware such as relays, indicators, transducers and motors.
+Eight output channels and eight input channels are provided.  Both channels employ latches to obtain stable readings.  They may be used for eight bit bytes or to read or control single independent devices.  PIO-SP is located in the Spectrum's I/O map at address 63 (decimal). Both ports have the same address so BASIC or machine code IN and OUT commands can be used.  For example, OUT 63,85 will put an alternate pattern of ones and zeroes at the output port.  The input port has provision for strobing-in the exteral data.  If data is meant to be continuously read in the Spectrum, without attention from the outside then the ~STB pin should be connected to GND (fit JP1).  The Spectrum strobes the input latch when executing an IN command and therefore reads whatever is present in the 8 bit latch, while strobing in the new data at the same time.  All inputs and outputs are TTL compatibe and have high drive capabilities.
+The unit plugs into the rear of the Spectrum. (note this unit does not currently include the male pass-through edge connector of the original)
+Header connections are identical to the Camel Products PIO for ZX81. For convenience, in addition to the DIP-16 headers, a 20-way IDC header is also provided for more convenient connection/disconnection.
